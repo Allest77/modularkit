@@ -3,18 +3,38 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class firstPersonMovement : MonoBehaviour {
+    //Publics 
     public CharacterController controller;
-    public Rigidbody rb;
     public BoxCollider playerCollider;
     public Transform cam;
-    public float speed = 7.0f, turnSmoothTime = 0.1f, turnSmoothVelocity, jumpForce = 4, threshold = 56;
+    public float speed = 32.0f, turnSmoothTime = 0.1f, turnSmoothVelocity, threshold = 56, jumpHeight = 30.2f, jumpForce = 20, gravity = -20.0f;
+    public bool isGrounded = true;
 
-    void Update() {
-        //Movement
-        float horziontal = Input.GetAxis("Horizontal");
-        float vertical = Input.GetAxis("Vertical");
-        Vector3 direction = (transform.right * horziontal) + (transform.forward * vertical);
+    //Privates
+    Rigidbody rb;
 
-        controller.Move(direction * speed * Time.deltaTime);
+    void Start() {
+        //GetComponents
+        rb = GetComponent<Rigidbody>();
+    }
+
+    void FixedUpdate() {
+        //Move horizontally.
+        float hInput = Input.GetAxis("Horizontal");
+        float vInput = Input.GetAxis("Vertical");
+        Vector3 movement = new Vector3(hInput, 0.0f, vInput);
+        rb.MovePosition(transform.position + movement * Time.deltaTime * speed * turnSmoothTime);
+
+
+    }
+
+    private void Update() {
+        //Jump input.
+        if ((Input.GetButtonDown("Jump") && isGrounded))
+        {
+            isGrounded = false;
+            GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.up) * jumpHeight * jumpForce);
+            Debug.Log("Jumping");
+        }
     }
 }
