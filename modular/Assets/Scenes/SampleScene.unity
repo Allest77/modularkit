@@ -552,7 +552,7 @@ GameObject:
   - component: {fileID: 2073951312}
   - component: {fileID: 2073951308}
   m_Layer: 0
-  m_Name: dood
+  m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -666,14 +666,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 2073951308}
-  rb: {fileID: 2073951313}
   playerCollider: {fileID: 2073951307}
   cam: {fileID: 963194228}
   speed: 7
   turnSmoothTime: 0.1
   turnSmoothVelocity: 0
-  jumpForce: 4
   threshold: 56
+  jumpHeight: 30.2
+  jumpForce: 4
+  gravity: -20
+  isGrounded: 1
 --- !u!54 &2073951313
 Rigidbody:
   m_ObjectHideFlags: 0
