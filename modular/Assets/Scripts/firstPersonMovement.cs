@@ -36,5 +36,11 @@ public class firstPersonMovement : MonoBehaviour {
             GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.up) * jumpHeight * jumpForce);
             Debug.Log("Jumping");
         }
+        else {
+            if ((Input.GetButtonUp("Jump") && !isGrounded)) {
+                GetComponent<Rigidbody>().AddForce(transform.TransformDirection(Vector3.down) * gravity);
+                Debug.Log("HOLY AAAAAAAHHHHHHHHHHHHHH-");
+            }
+        }
     }
 }
