@@ -389,10 +389,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.11, y: 0.287, z: 0.22}
+  m_LocalPosition: {x: 0.11, y: -0.35, z: 0.22}
   m_LocalScale: {x: 0.96573, y: 0.96573, z: 0.96573}
-  m_Children:
-  - {fileID: 1194338959}
+  m_Children: []
   m_Father: {fileID: 2073951311}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -408,7 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7812258f970b45418af7593089220fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 200
+  mouseSensitivity: 100
   playerBody: {fileID: 2073951311}
 --- !u!1 &994489565
 GameObject:
@@ -505,36 +504,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994489565}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1194338958
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1194338959}
-  m_Layer: 0
-  m_Name: target
-  m_TagString: Untagged
-  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1194338959
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194338958}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.294, z: 1.94}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 963194228}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2072035117
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,7 +580,7 @@ CharacterController:
   m_GameObject: {fileID: 2073951306}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Height: 2
   m_Radius: 0.5
@@ -699,10 +668,9 @@ MonoBehaviour:
   controller: {fileID: 2073951308}
   playerCollider: {fileID: 2073951307}
   cam: {fileID: 963194228}
-  target: {fileID: 0}
   speed: 7
   turnSmoothTime: 0.1
-  turnSmoothVelocity: 0.1
+  turnSmoothVelocity: 0
   threshold: 56
   jumpHeight: 30.2
   jumpForce: 4
