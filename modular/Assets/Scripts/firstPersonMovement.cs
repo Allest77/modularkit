@@ -6,7 +6,7 @@ public class firstPersonMovement : MonoBehaviour {
     //Publics 
     public CharacterController controller;
     public BoxCollider playerCollider;
-    public Transform cam, target;
+    public Transform cam;
     public float speed = 30.0f, turnSmoothTime = 0.1f, turnSmoothVelocity, threshold = 56, jumpHeight = 30.2f, jumpForce = 20, gravity = -20.0f;
     public bool isGrounded = true;
 
@@ -39,8 +39,6 @@ public class firstPersonMovement : MonoBehaviour {
                 Debug.Log("HOLY AAAAAAAHHHHHHHHHHHHHH-");
             }
         }
-
-        transform.LookAt(target);
     }
 
     void OnCollisionEnter (Collision hit) {
