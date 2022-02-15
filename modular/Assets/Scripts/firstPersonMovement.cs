@@ -7,7 +7,7 @@ public class firstPersonMovement : MonoBehaviour {
     public CharacterController controller;
     public BoxCollider playerCollider;
     public Transform cam, target;
-    public float speed = 100.0f, turnSmoothTime = 0.1f, turnSmoothVelocity, threshold = 56, jumpHeight = 30.2f, jumpForce = 20, gravity = -20.0f;
+    public float speed = 30.0f, turnSmoothTime = 0.1f, turnSmoothVelocity, threshold = 56, jumpHeight = 30.2f, jumpForce = 20, gravity = -20.0f;
     public bool isGrounded = true;
 
     //Privates
@@ -18,15 +18,15 @@ public class firstPersonMovement : MonoBehaviour {
         rb = GetComponent<Rigidbody>();
     }
 
-    void FixedUpdate() {
+    void Update() {
         //Move horizontally.
         float hInput = Input.GetAxis("Horizontal");
         float vInput = Input.GetAxis("Vertical");
         Vector3 movement = new Vector3(hInput, 0.0f, vInput);
-        rb.MovePosition(transform.position + movement * Time.deltaTime * speed * turnSmoothTime);
+        rb.MovePosition(transform.position + movement * Time.deltaTime * speed * turnSmoothTime * turnSmoothVelocity);
     }
 
-    private void Update() {
+    private void FixedUpdate() {
         //Jump input.
         if (Input.GetButtonDown("Jump") && isGrounded) {
             isGrounded = false;

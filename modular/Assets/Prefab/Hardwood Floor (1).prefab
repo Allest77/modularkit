@@ -677,7 +677,7 @@ GameObject:
   - component: {fileID: -7585984089357807547}
   m_Layer: 0
   m_Name: Hardwood Floor (1)
-  m_TagString: Untagged
+  m_TagString: Grounded
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -759,8 +759,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.101651736, y: 0.0017416796, z: 0.09966975}
-  m_Center: {x: 0.0011981488, y: 0.0193, z: 0.008486919}
+  m_Size: {x: 0.101651736, y: 0.002129847, z: 0.09966976}
+  m_Center: {x: 0.0011981488, y: 0.019494109, z: 0.008486919}
 --- !u!1 &2811521759647130797
 GameObject:
   m_ObjectHideFlags: 0

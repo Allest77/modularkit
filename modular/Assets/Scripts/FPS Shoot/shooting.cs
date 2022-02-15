@@ -9,12 +9,11 @@ public class shooting : MonoBehaviour {
     public float coolDownDelay = 1f, burstDelay = 0.3f;
 
     void Update() {
-        if (Input.GetMouseButtonDown(0))
-        {
+        if (Input.GetMouseButtonDown(0)) {
             canShoot = true;
             StartCoroutine(CoolDown());
             Debug.Log("gigigigigi, BANG BANG, BLLLEEGHU, BOO BOO BOO, GE GE!");
-        } else if (Input.GetMouseButtonUp(1))
+        } else if (Input.GetMouseButtonUp(0))
         {
             canShoot = false;
             StopCoroutine(CoolDown());
