@@ -7,7 +7,7 @@ public class firstPersonMovement : MonoBehaviour {
     public CharacterController controller;
     public BoxCollider playerCollider;
     public Transform cam, target;
-    public float speed = 60.0f, turnSmoothTime = 0.1f, turnSmoothVelocity, threshold = 56, jumpHeight = 30.2f, jumpForce = 20, gravity = -20.0f;
+    public float speed = 100.0f, turnSmoothTime = 0.1f, turnSmoothVelocity, threshold = 56, jumpHeight = 30.2f, jumpForce = 20, gravity = -20.0f;
     public bool isGrounded = true;
 
     //Privates

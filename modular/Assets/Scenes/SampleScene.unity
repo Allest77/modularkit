@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &93510065
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 93510066}
+  m_Layer: 0
+  m_Name: aim
+  m_TagString: Untagged
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &93510066
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93510065}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.348, z: 1.43}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 576386226}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &576386218 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4493178516093258589, guid: 4fdfe45ea0c402b409cd1f3b22dbf08e, type: 3}
+  m_PrefabInstance: {fileID: 4493178514408355607}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &576386219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 576386218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6e9229bcba920146adc507d84c2cc5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletPrefab: {fileID: 2829167473099127225, guid: 76a25df0946740f429a39bbcf224b664, type: 3}
+  spawnLocation: {fileID: 93510066}
+  canShoot: 0
+  coolDownDelay: 3
+  burstDelay: 0.3
+--- !u!4 &576386226 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4493178516093258584, guid: 4fdfe45ea0c402b409cd1f3b22dbf08e, type: 3}
+  m_PrefabInstance: {fileID: 4493178514408355607}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &681015110
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +221,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 681015110}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -445,6 +502,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4493178516093258567, guid: 4fdfe45ea0c402b409cd1f3b22dbf08e, type: 3}
+      propertyPath: speed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4493178516093258567, guid: 4fdfe45ea0c402b409cd1f3b22dbf08e, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4493178516093258584, guid: 4fdfe45ea0c402b409cd1f3b22dbf08e, type: 3}
       propertyPath: m_RootOrder
       value: 2
